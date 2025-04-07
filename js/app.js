@@ -82,15 +82,21 @@ function openIndoorMap() {
     mapContainer.style.height = "100%";
     floorplanContainer.appendChild(mapContainer);
   
-    const closeButton = document.createElement("p");
-    closeButton.innerText = "X";
+    const closeButton = document.createElement("button");
+    closeButton.id = "close-button";
+    closeButton.innerText = "Close Floorplan";
     closeButton.style.position = "absolute";
-    closeButton.style.top = "10%";
-    closeButton.style.right = "20%";
+    closeButton.style.top = "80px";
+    closeButton.style.right = "10px";
     closeButton.style.fontSize = "20px";
+    closeButton.style.zIndex = "9999999";
+    closeButton.style.color = "#fff";
+    closeButton.style.backgroundColor = "#D94F34D9";
+    closeButton.style.fontStyle = "bold";
+    closeButton.style.border = "none";
+    closeButton.style.padding = "5px 15px";
+    closeButton.style.borderRadius = "5px";
     closeButton.style.cursor = "pointer";
-    closeButton.style.fontWeight = "bold";
-    closeButton.style.zIndex = "10000001";
   
     closeButton.onclick = () => {
       floorplanContainer.remove();
